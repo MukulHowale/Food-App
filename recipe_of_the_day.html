@@ -8,18 +8,25 @@
     <title>Recipe of the day</title>
 </head>
 <body>
-    
+    <div id="recipeDay">
+
+    </div>
 </body>
 </html>
 <script type="module">
     import navbar from "./components/navbar.js";
 
-    import {searchRecipe, append, textShadow} from "./scripts/searchRecipe.js";   
+    import {searchRecipe, append, textShadow} from "./scripts/searchRecipe.js";
+
+    import showData from "./scripts/showData.js";
 
     let navDiv = document.createElement('div');
     navDiv.innerHTML = navbar();
     document.body.prepend(navDiv);
     textShadow("r");
 
-    let data = await s
+    let data = await searchRecipe("https://www.themealdb.com/api/json/v1/1/random.php");
+
+    showData(data.meals);
+
 </script>

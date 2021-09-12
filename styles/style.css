@@ -88,3 +88,13 @@ h3{
     border-radius: 5px;
     background-color: rgb(153, 108, 41);
 }
+
+/* recipe of the day */
+
+#recipeDay{
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
