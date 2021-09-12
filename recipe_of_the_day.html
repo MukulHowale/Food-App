@@ -27,6 +27,8 @@
 
     let data = await searchRecipe("https://www.themealdb.com/api/json/v1/1/random.php");
 
-    showData(data.meals);
+    let id = document.getElementById('recipeDay');
+
+    showData(data.meals,id);
 
 </script>

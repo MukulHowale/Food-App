@@ -1,7 +1,6 @@
-let showData = (data) =>{
-    let sd = document.getElementById('recipeDay');
-    sd.style.display = "flex";
-    sd.style.flexDirection = "column";
+let showData = (data,id) =>{
+    id.style.display = "flex";
+    id.style.flexDirection = "column";
 
     // console.log(data);
 
@@ -26,7 +25,7 @@ let showData = (data) =>{
         p.style.lineHeight = "24px";
         p.textContent = strInstructions;
 
-        sd.replaceChildren(img, h2, p);
+        id.replaceChildren(img, h2, p);
     })
 
     // console.log(data);

@@ -98,3 +98,13 @@ h3{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+/* latest */
+
+#latest{
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
