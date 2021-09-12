@@ -1,0 +1,90 @@
+h3{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* navigation bar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: rgb(255, 218, 166);
+    border-radius: 20px;
+    height: 30px;
+    padding-top: 10px;
+}
+
+#navbar a{
+    color: rgb(150, 94, 10);
+}
+
+#options{
+    display: flex;
+    justify-content: space-between;
+}
+
+#options h3 {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+/* home page */
+#homeDiv{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    margin: 100px auto;
+}
+
+#homeDiv > h1{
+    color: rgb(75, 55, 25);
+}
+
+#homeDiv > p{
+    font-size: 20px;
+    color: rgb(150, 94, 10);
+    font-weight: 700;
+}
+
+/* search page */
+#searchDiv{
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#searchDiv > input{
+    width: 96%;
+    height: 50px;
+    border-radius: 20px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 243, 225);
+    color: rgb(75, 55, 25);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* show data*/
+#show{
+    max-height: 86%;
+    max-width: 99.7%;
+}
+
+#show::-webkit-scrollbar{
+    width: 8px;
+}
+
+#show::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: rgb(75, 55, 25);
+}
+
+#show::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: rgb(153, 108, 41);
+}

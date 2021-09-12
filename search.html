@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\Food-App\styles\style.css">
+    <title>Search</title>
+</head>
+<body>
+    <div id="searchDiv">
+        <input type="text" placeholder="Enter Meal" id="input">
+        <div id="show">
+
+        </div>
+    </div>
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js";
+
+    import {searchRecipe, append, textShadow} from "./scripts/searchRecipe.js";    
+
+    //navbar
+    let navDiv = document.createElement('div');
+    navDiv.innerHTML = navbar();
+    document.body.prepend(navDiv);
+    textShadow("s");
+
+    // event listener on input to call wait
+    let input = document.getElementById('input');
+    input.addEventListener('input',() =>{
+        wait(main,1000);
+    });
+
+    // delay ID
+    let delay;
+
+    let main = async () =>{
+        let val = input.value;
+
+        let show = document.getElementById('show');
+
+        var data = await searchRecipe(`https://www.themealdb.com/api/json/v1/1/search.php?s=${val}`)
+
+        append(data.meals, show, input);
+
+        // input.style.borderBottom = "1px solid black";
+    }
+
+    // debouncing or throtling
+    let wait = (f,t) =>{
+        if(delay){
+            clearTimeout(delay);
+        }
+
+        delay = setTimeout(() =>{
+            f();
+        },t);
+    }
+
+
+</script>
